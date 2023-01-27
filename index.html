@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Portal Website DevOps Sekawan Media">
+    <meta name="author" content="">
+    <title>DevOps Portal Website</title>
+    <!-- Load Favicon-->
+    <link href="img/favicon.ico" rel="shortcut icon" type="s">
+    <!-- Load Material Icons from Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <!-- Roboto and Roboto Mono fonts from Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet">
+    <!-- Load main stylesheet-->
+    <link href="css/styles.css" rel="stylesheet">
+    </head>
+
+<body class="nav-fixed bg-light">
+    <!-- Top app bar navigation menu-->
+    <nav class="top-app-bar navbar navbar-expand navbar-dark bg-sekawan">
+        <div class="container-fluid px-4">
+            <!-- Drawer toggle button-->
+            <button class="btn btn-lg btn-icon order-1 order-lg-0 mdc-ripple-upgraded" id="drawerToggle"
+                href="javascript:void(0);"
+                style="--mdc-ripple-fg-size:28px; --mdc-ripple-fg-scale:2.78151; --mdc-ripple-fg-translate-start:9px, 13px; --mdc-ripple-fg-translate-end:10px, 10px;">
+                <i class="material-icons">menu</i>
+            </button>
+            <!-- Navbar brand-->
+            <a class="navbar-brand me-auto" href="">
+                <div class="text-uppercase font-monospace">DevOps</div>
+            </a>
+            <!-- Navbar items-->
+            <div class="d-flex align-items-center mx-3 me-lg-0">
+                <!-- Navbar-->
+                <!-- <ul class="navbar-nav d-none d-lg-flex">
+                    <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" >Documentation</a></li>
+                </ul> -->
+                <!-- Navbar buttons-->
+                <div class="d-flex">
+                    <!-- Jump to dropdown-->
+                    <div class="dropdown">
+                        <button class="btn btn-lg btn-icon dropdown-toggle mdc-ripple-upgraded" id="dropdownMenuProfile" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="material-icons">move_down</i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end mt-3" aria-labelledby="dropdownMenuProfile">
+                            <li>
+                                <a class="dropdown-item mdc-ripple-upgraded" href="#support">
+                                    <i class="material-icons leading-icon">support_agent</i>
+                                    <div class="me-3">Support</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item mdc-ripple-upgraded" href="#devtools">
+                                    <i class="material-icons leading-icon">construction</i>
+                                    <div class="me-3">DevTools</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item mdc-ripple-upgraded" href="#contact">
+                                    <i class="material-icons leading-icon">contacts</i>
+                                    <div class="me-3">Contact</div>
+                                </a>
+                            </li>
+                            <!-- <li>
+                                <a class="dropdown-item mdc-ripple-upgraded" href="#guide">
+                                    <i class="material-icons leading-icon">menu_book</i>
+                                    <div class="me-3">Guide</div>
+                                </a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Layout wrapper-->
+    <div id="layoutDrawer">
+        <!-- Layout navigation-->
+        <div id="layoutDrawer_nav">
+            <!-- Drawer navigation-->
+            <nav class="drawer accordion drawer-light bg-white" id="drawerAccordion">
+                <div class="drawer-menu">
+                    <div class="nav">
+                        <!-- Drawer section heading (Account)-->
+                        <!-- <div class="drawer-menu-heading d-sm-none">Account</div> -->
+                        <!-- Drawer link (Notifications)-->
+                        <!-- <a class="nav-link d-sm-none mdc-ripple-upgraded" href="#!">
+                            <div class="nav-link-icon"><i class="material-icons">notifications</i></div>
+                            Notifications
+                        </a> -->
+                        <!-- Drawer link (Messages)-->
+                        <!-- <a class="nav-link d-sm-none mdc-ripple-upgraded" href="#!">
+                            <div class="nav-link-icon"><i class="material-icons">mail</i></div>
+                            Messages
+                        </a> -->
+                        <!-- Divider-->
+                        <!-- <div class="drawer-menu-divider d-sm-none"></div> -->
+                        <!-- Drawer section heading (Interface)-->
+                        <div class="drawer-menu-heading">Dashboard</div>
+                        <!-- Drawer link (Home)-->
+                        <a class="nav-link active mdc-ripple-upgraded" href="">
+                            <div class="nav-link-icon"><i class="material-icons">home</i></div>
+                            Home
+                        </a>
+                        <!-- Drawer link (Dashboards)-->
+                        <a class="nav-link collapsed mdc-ripple-upgraded" href="javascript:void(0);"
+                            data-bs-toggle="collapse" data-bs-target="#collapseDashboards" aria-expanded="false"
+                            aria-controls="collapseDashboards">
+                            <div class="nav-link-icon"><i class="material-icons">description</i></div>
+                            Guide
+                            <div class="drawer-collapse-arrow"><i class="material-icons">expand_more</i></div>
+                        </a>
+                        <!-- Nested drawer nav (Dashboards)-->
+                        <div class="collapse" id="collapseDashboards" aria-labelledby="headingOne"
+                            data-bs-parent="#drawerAccordion">
+                            <nav class="drawer-menu-nested nav">
+                                <a class="nav-link mdc-ripple-upgraded" href="#">Guide 1</a>
+                                <a class="nav-link mdc-ripple-upgraded" href="#">Guide 2</a>
+                                <a class="nav-link mdc-ripple-upgraded" href="#">Guide 3</a>
+                            </nav>
+                        </div>
+                        <!-- Drawer link (Pages)-->
+                        <a class="nav-link collapsed mdc-ripple-upgraded" href="javascript:void(0);"
+                            data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false"
+                            aria-controls="collapsePages">
+                            <div class="nav-link-icon"><i class="material-icons">layers</i></div>
+                            Pages
+                            <div class="drawer-collapse-arrow"><i class="material-icons">expand_more</i></div>
+                        </a>
+                        <!-- Nested drawer nav (Pages)-->
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                            data-bs-parent="#drawerAccordion">
+                            <nav class="drawer-menu-nested nav accordion" id="drawerAccordionPages">
+                                <!-- Drawer link (Pages -> Account)-->
+                                <a class="nav-link collapsed mdc-ripple-upgraded" href="javascript:void(0);"
+                                    data-bs-toggle="collapse" data-bs-target="#pagesCollapseAccount"
+                                    aria-expanded="false" aria-controls="pagesCollapseAccount">
+                                    Pages
+                                    <div class="drawer-collapse-arrow"><i class="material-icons">expand_more</i></div>
+                                </a>
+                                <!-- Nested drawer nav (Pages -> Account)-->
+                                <div class="collapse" id="pagesCollapseAccount" aria-labelledby="headingOne"
+                                    data-bs-parent="#drawerAccordionPages">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link mdc-ripple-upgraded"
+                                            href="#">Pages</a>
+                                        <a class="nav-link mdc-ripple-upgraded"
+                                            href="#">Pages</a>
+                                        <a class="nav-link mdc-ripple-upgraded"
+                                            href="#">Pages</a>
+                                    </nav>
+                                </div>
+                                <!-- Drawer link (Pages -> Authentication)-->
+                                <!-- Drawer link (Pages -> Blank Pages)-->
+                                <a class="nav-link mdc-ripple-upgraded" href="#">Blank Page</a>
+                            </nav>
+                        </div>
+                        <!-- Divider-->
+                        <!-- <div class="drawer-menu-divider"></div> -->
+                        <!-- Drawer section heading (Featured)-->
+                        <!-- <div class="drawer-menu-heading">Featured</div> -->
+                        <a class="nav-link mdc-ripple-upgraded" href="#">
+                            <div class="nav-link-icon"><i class="material-icons">help</i></div>
+                            FAQ
+                        </a>
+                        <a class="nav-link mdc-ripple-upgraded" href="#">
+                            <div class="nav-link-icon"><i class="material-icons">explore</i></div>
+                            DevOps Journey
+                        </a>
+                        <a class="nav-link mdc-ripple-upgraded" href="#">
+                            <div class="nav-link-icon"><i class="material-icons">info</i></div>
+                            About DevOps
+                        </a>
+                    </div>
+                </div>
+                <!-- Drawer footer -->
+                <div class="drawer-footer border-top">
+                        <img src="img/logo-footer.png" alt="footer logo" style="height: 25px;">
+                </div>
+            </nav>
+        </div>
+        <!-- Layout content-->
+        <div id="layoutDrawer_content">
+            <!-- Main page content-->
+            <main>
+                <!-- Page header-->
+                <header class="masthead bg-sekawan">
+                    <div class="container-xl px-5">
+                        <div class="row justify-content-center gx-5">
+                            <div class="col-md-8 col-lg-6">
+                                <div class="text-center py-5 pt-5">
+                                    <!-- Logo -->
+                                    <img src="img/logo-header.png" alt="header logo" style="width:60px;height: 30px;">
+                                    <!-- Masthead content-->
+                                    <h1 class="masthead-heading display-5">DevOps Portal Website</h1>
+                                    <p style="font-style: italic; font-family: cursive;">"Collaborate, Improvise & Automate."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="container-xl p-5">
+                    <!-- Support Page -->
+                    <h2 class="display-6 mb-0">Support</h2>
+                    <p class="small text-muted" style="font-style: italic;">You can request us for some help.</p>
+                    <div id="support"></div>
+                    <hr class="mb-5 mt-0">
+                    <div class="row gx-5">
+                    <!-- GANTI col-lg-4 KE ANGKA LEBIH KECIL AGAR GAMBAR MENGECIL DAN SEBALIKNYA -->
+                        <div class="col-sm-6 col-lg-custom mb-5">
+                            <a class="d-block ripple-gray rounded shadow-3 overflow-hidden mb-2 mdc-ripple-upgraded" href="https://support.skwn.dev/" target="_blank">
+                                <img class="img-fluid" src="img/ticket.jpg" alt="ticket"></a>
+                            <div class="small font-monospace text-center">Ticket</div>
+                        </div>
+                        <div class="col-sm-6 col-lg-custom mb-5">
+                            <a class="d-block ripple-gray rounded shadow-3 overflow-hidden mb-2 mdc-ripple-upgraded" href="https://sekawanmedia.notion.site/OpenVPN-Connect-Tutorial-4f4f333ff6a94dad8f2878b396c33356" target="_blank">
+                                <img class="img-fluid" src="img/vpn.jpg" alt="vpn"></a>
+                            <div class="small font-monospace text-center">VPN</div>
+                        </div>
+                        <div class="col-sm-6 col-lg-custom mb-5">
+                            <a class="d-block ripple-gray rounded shadow-3 overflow-hidden mb-2 mdc-ripple-upgraded" href="!#" target="_blank">
+                                <img class="img-fluid" src="img/feedback.jpg" alt="feedback"></a>
+                            <div class="small font-monospace text-center">Feedback</div>
+                        </div>
+                    </div>
+
+                    <!-- DevTools Page -->
+                    <h2 class="display-6 mb-0">DevTools</h2>
+                    <p class="small text-muted" style="font-style: italic;">Feel free to use development tools.</p>
+                    <div id="devtools"></div>
+                    <hr class="mb-5 mt-0">
+                    <div class="row gx-5">
+                    <!-- GANTI col-lg-custom KE col-lg-3 untuk menyesuaikan ukuran gambar-->
+                        <div class="col-sm-6 col-lg-custom mb-5">
+                            <a class="d-block ripple-gray rounded shadow-3 overflow-hidden mb-2 mdc-ripple-upgraded" href="https://gitlab.skwn.dev/" target="_blank">
+                                <img class="img-fluid" src="img/gitlab.jpg" alt="gitlab"></a>
+                            <div class="small font-monospace text-center">GitLab</div>
+                        </div>
+                        <div class="col-sm-6 col-lg-custom mb-5">
+                            <a class="d-block ripple-gray rounded shadow-3 overflow-hidden mb-2 mdc-ripple-upgraded" href="https://jenkins.skwn.dev/" target="_blank">
+                                <img class="img-fluid" src="img/jenkins.jpg" alt="jenkins"></a>
+                            <div class="small font-monospace text-center">Jenkins</div>
+                        </div>
+                        <div class="col-sm-6 col-lg-custom mb-5">
+                            <a class="d-block ripple-gray rounded shadow-3 overflow-hidden mb-2 mdc-ripple-upgraded" href="https://portainer.skwn.dev/" target="_blank">
+                                <img class="img-fluid" src="img/portainer.jpg" alt="portainer"></a>
+                            <div class="small font-monospace text-center">Portainer</div>
+                        </div>
+                        <div class="col-sm-6 col-lg-custom mb-5">
+                            <a class="d-block ripple-gray rounded shadow-3 overflow-hidden mb-2 mdc-ripple-upgraded" href="https://hoppscotch.skwn.dev/" target="_blank">
+                                <img class="img-fluid" src="img/hoppstoch.jpg" alt="Hoppscotch"></a>
+                            <div class="small font-monospace text-center">Hoppscotch</div>
+                        </div>
+                        <div class="col-sm-6 col-lg-custom mb-5">
+                            <a class="d-block ripple-gray rounded shadow-3 overflow-hidden mb-2 mdc-ripple-upgraded" href="https://bookstack.skwn.dev/" target="_blank">
+                                <img class="img-fluid" src="img/bookstack.jpg" alt="bookstack"></a>
+                            <div class="small font-monospace text-center">Bookstack</div>
+                        </div>
+                    </div>
+
+                    <!-- Guide Page-->
+                    <!-- <h2 class="display-6 mb-0 mt-3">Guide Page</h2>
+                    <p class="small text-muted">Illustrated pages to cover common errors</p>
+                    <div id="guide"></div>
+                    <hr class="mb-5 mt-0">
+                    <div class="row gx-5">
+                        <div class="col-sm-6 col-lg-3 mb-5">
+                            <div class="card card-raised ripple-gray mdc-ripple-upgraded">
+                                <div class="card-body text-center">
+                                    <a class="stretched-link text-decoration-none font-monospace" href="#">Guide</a></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mb-5">
+                            <div class="card card-raised ripple-gray mdc-ripple-upgraded">
+                                <div class="card-body text-center">
+                                    <a class="stretched-link text-decoration-none font-monospace" href="#">Guide</a></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mb-5">
+                            <div class="card card-raised ripple-gray mdc-ripple-upgraded">
+                                <div class="card-body text-center">
+                                    <a class="stretched-link text-decoration-none font-monospace" href="#">Guide</a></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mb-5">
+                            <div class="card card-raised ripple-gray mdc-ripple-upgraded">
+                                <div class="card-body text-center">
+                                    <a class="stretched-link text-decoration-none font-monospace" href="#">Guide</a></div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </main>
+
+            <!-- Footer-->
+            <!-- Min-height is set inline to match the height of the drawer footer-->
+            <div id="contact"></div>
+            <footer class="py-3 mt-auto border-top" style="min-height: 58px">
+                <div class="container-xl px-5">
+                    <div class="d-flex flex-column flex-sm-row align-items-center justify-content-sm-between small">
+                        <div class="me-sm-2">Copyright © Sekawan Media 2023 </div>
+                        <div class="d-flex ms-sm-2">
+                            <a class="text-decoration-none" href="https://api.whatsapp.com/send?phone=6281232215502" target="_blank">Kontak Whatsapp</a>
+                            <div class="mx-1">|</div>
+                            <a class="text-decoration-none" href="mailto:devops@sekawanmedia.co.id">Kontak Email</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Load Bootstrap JS bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <!-- Load global scripts-->
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>
